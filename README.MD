@@ -20,6 +20,7 @@ When done, the given action is ran inside the path the configured repository res
 4. Run `npm make:secret` to generate a secret.
 5. Update `config.json` to your likings using the secret generated.
 6. Run `npm start` to run the listener
+7. Add the following URL to your repository webhooks: `http://<address>/push`
 
 ## Config file structure
 
