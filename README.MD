@@ -4,13 +4,13 @@ Runs actions from a config file for multiple gits using one github hook.
 
 ## Overview
 
-This project allows to configure multiple repositories using a single config file and execute actions on them when a push event is received. 
-When the event is received, the payload is verified. 
-`git pull` is executed inside the path the configured repository resides in. 
-When done, the given action is ran inside the path the configured repository resides in. 
+This project allows to configure multiple repositories using a single config file and execute actions on them when a push event is received.  
+When the event is received, the payload is verified.  
+`git pull` is executed inside the path the configured repository resides in.  
+When done, the given action is ran inside the path the configured repository resides in.  
 
 ## Useful commands
-`npm start`         Starts the action listener 
+`npm start`         Starts the action listener  
 `npm make:secret`   Creates a secret to use in the config file
 
 ## Installing
