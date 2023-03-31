@@ -11,13 +11,13 @@ When done, the given action is ran inside the path the configured repository res
 
 ## Useful commands
 `npm start`         Starts the action listener  
-`npm make:secret`   Creates a secret to use in the config file
+`npm run make:secret`   Creates a secret to use in the config file
 
 ## Installing
 1. Clone this git repository
 2. Run `npm i`
 3. Run `cp config.example.json config.json`
-4. Run `npm make:secret` to generate a secret.
+4. Run `npm run make:secret` to generate a secret.
 5. Update `config.json` to your likings using the secret generated.
 6. Run `npm start` to run the listener
 7. Add the following URL to your repository webhooks: `http://<address>/push`
