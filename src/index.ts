@@ -23,11 +23,6 @@ app.post('/push', (req, res) => {
     const payload = JSON.parse(req.body);
     const repo = repos.find(x => x.name.toLowerCase() === payload.repository?.full_name?.toLowerCase());
 
-    // Ignore every action besides push
-    if (evName !== "push") {
-        return res.status(200).send("Ignored");
-    }
-
     // Check if repository is registered
     if (!repo) {
         console.log('a');
@@ -39,6 +34,11 @@ app.post('/push', (req, res) => {
     if (verifiedResponse) {
         return res.status(500).send(verifiedResponse);
     }
+
+        // Ignore every action besides push
+        if (evName !== "push") {
+            return res.status(200).send("Ignored");
+        }
 
     // get the master branch & the ref of the push
     let branch = repo.branch;
