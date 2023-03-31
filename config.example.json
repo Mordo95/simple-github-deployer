@@ -1,0 +1,11 @@
+{
+    "port": 8080,
+    "repositories": [
+        {
+            "name": "mordo95/example-repo",
+            "secret": "bc883aa2bf1c2cfee7002acb3843004e",
+            "path": "/var/www/example-repo",
+            "action": "./update.sh"
+        }
+    ]
+}
