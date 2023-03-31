@@ -8,7 +8,7 @@ import { verifyPayload } from './utils/verify';
 const app = express();
 
 // Body as text for verification, limit 10 mb
-app.use(express.text());
+app.use(express.text({limit: 1024 * 1000 * 10}));
 
 if (!existsSync("config.json")) {
     console.error("No config file defined. Exiting early");
