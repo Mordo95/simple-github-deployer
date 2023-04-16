@@ -49,8 +49,9 @@ app.post('/push', (req, res) => {
 
     // Check if the ref is the master branch ref
     if (ref === `refs/heads/${branch}`) {
-        exec(`git pull`, {cwd: repo.path});
-        exec(`${repo.action}`, {cwd: repo.path});
+        exec(`git pull`, {cwd: repo.path}, () => {
+            exec(`${repo.action}`, {cwd: repo.path});
+        });
     }
 
     // return OK
